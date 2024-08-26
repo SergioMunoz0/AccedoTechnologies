@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import "../styles/css/index.css"
+import "../styles/css/utils.css"
 import "../styles/css/createPost.css"
 
 
@@ -37,7 +37,7 @@ export default function CreatePost(props){
         }
 
         props.setDataPosts(prevData =>{
-            return [...prevData, newPost]
+            return [newPost, ...prevData]
         })
     }
     

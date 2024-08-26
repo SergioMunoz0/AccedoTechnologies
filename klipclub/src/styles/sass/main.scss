@@ -1,4 +1,4 @@
-@use 'index';
+@use 'utils';
 
 .main-container{
     margin-top: 20px;
@@ -20,15 +20,15 @@
     }
     
     span{
-        padding: .5em 1em;
-        color: index.$font-main-color;
+        padding: .7em 1em;
+        color: utils.$font-main-color;
         font-weight: bold;
-        font-family: index.$font-stack;
+        font-family: utils.$font-stack;
         border-radius: 1em;
     }   
 
     span:hover{
-        background-color: index.$main-element-background-color-dark;
+        background-color: utils.$main-element-background-color-dark;
     }
 }
 
@@ -38,5 +38,6 @@
     display: flex;  
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
     

@@ -1,12 +1,60 @@
-@use 'index';
+@use 'utils';
 
 .postItem-container{
     margin-top: 15px;
     width: 50%;
     padding: 1em;
     border-radius: 1em;
-    background-color: index.$main-element-background-color-dark;
-    color:index.$font-main-color;
-    font-family: index.$font-stack;
+    background-color: utils.$main-element-background-color-dark;
+    color:utils.$font-main-color;
+    font-family: utils.$font-stack;
     min-height: 100px;
+    display: flex;  
+    gap: 1em;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .postItem-userInfo{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p{
+            font-weight: bolder;
+        }
+
+        .profilePicture{
+            border-radius: 2em;
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .postItem-main{
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .divisorLine{
+        width: 100%;
+        border: solid 1px utils.$main-element-background-color-light;
+    }
+
+    .postItem-socialOptions{
+        display: flex;  
+        width: 100%;
+        justify-content: space-around;
+
+        span{
+            padding: .5em 1em;
+            color: utils.$font-main-color;
+            font-weight: bold;
+            font-family: utils.$font-stack;
+            border-radius: 1em;
+        }   
+    
+        span:hover{
+            background-color: utils.$main-element-background-color-light;
+        }
+    }
 }

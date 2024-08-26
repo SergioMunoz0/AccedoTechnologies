@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap");
 .createPost-container {
-  background-color: #2C2C2C;
+  background-color: #292927;
   padding: 1em;
   border-radius: 1em;
   width: 50%;
@@ -22,9 +22,9 @@
   border-radius: 0.9em;
   height: 70%;
   width: 90%;
-  color: #E6E6E6;
+  color: rgba(228, 228, 227, 0.9725490196);
   padding: 1em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 .createPost-container .createPost-form .textPost-input::placeholder {
   margin: 0;

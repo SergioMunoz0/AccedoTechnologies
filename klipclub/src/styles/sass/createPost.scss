@@ -1,7 +1,7 @@
-@use 'index';
+@use 'utils';
 
 .createPost-container{
-    background-color: index.$main-element-background-color-dark;
+    background-color: utils.$main-element-background-color-dark;
     padding: 1em;
     border-radius: 1em;
     width: 50%;
@@ -24,9 +24,9 @@
             border-radius: .9em;
             height: 70%;
             width: 90%;
-            color:index.$font-main-color;
+            color:utils.$font-main-color;
             padding: 1em;
-            font-family: index.$font-stack;
+            font-family: utils.$font-stack;
         }
 
         .textPost-input::placeholder{
@@ -39,7 +39,7 @@
             .submitButton{
                 width: fit-content;
                 border: none;
-                background-color: index.$buttons-color;
+                background-color: utils.$buttons-color;
                 font-size: 1rem;
                 font-weight: bold;
                 padding: .5em;
