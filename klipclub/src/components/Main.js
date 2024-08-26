@@ -1,15 +1,15 @@
 import CreatePost from "./CreatePost.js"
 import PostItem from "./PostItem.js"
 import {useState} from 'react'
-
+import '../styles/css/main.css'
 
 export default function Main(){
     //Variable que guarda los post localmente
     const [dataPosts,setDataPosts] = useState([])
-   
+
     const postItems = dataPosts.map(post=>{
         return <PostItem 
-                    text={post}
+                    text={post.text}
                 />
         })
         

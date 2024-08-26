@@ -2,10 +2,10 @@ import {useState} from 'react'
 
 export default function CreatePost(props){
 
-    //Informacion de los posts
+    //Informacion de los posts por ahora solo se tomara el mensaje, pero se puede agrega mas
     const [formInfo,setFormInfo] = useState(
         {
-            text: "",
+            text: ""
         }
     )
 
@@ -23,7 +23,15 @@ export default function CreatePost(props){
     function handleSubmit(event){
         event.preventDefault()
 
-        const newPost = [formInfo.text]
+        //validar que el campo no este vacio
+        if (formInfo.text.trim() === "") {
+            alert("El campo de texto no puede estar vacío");
+            return;
+        }
+
+        const newPost = {
+            "text":formInfo.text
+        }
 
         props.setDataPosts(prevData =>{
             return [...prevData, newPost]
