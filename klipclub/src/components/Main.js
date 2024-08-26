@@ -19,6 +19,13 @@ export default function Main(){
                 dataPosts={dataPosts}
                 setDataPosts={setDataPosts}
             />
+
+            <div className="filterOptions">
+                <span>Trending</span>
+                <span>Friends</span>
+                <span>Private Channel</span>
+            </div>
+
             {dataPosts.length > 0 && (
                 <div className="post-container">
                     {postItems}

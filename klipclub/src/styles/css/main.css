@@ -1,9 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .main-container {
-  background-color: rgb(211, 211, 211);
-  border: 1px solid red;
-  width: 60%;
+  margin-top: 20px;
+  width: 70%;
+  height: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filterOptions {
+  margin-top: 20px;
+  width: 52%;
+  display: flex;
+  gap: 1em;
+}
+.filterOptions :first-child {
+  background-color: #474747;
+}
+.filterOptions span {
+  padding: 0.5em 1em;
+  color: #E6E6E6;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  border-radius: 1em;
+}
+.filterOptions span:hover {
+  background-color: #2C2C2C;
+}
+
+.post-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,8 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    //border: .5px solid red;
+}
+
 body{
     background-color: #1E1E1E;
 }
 
 .app-container{
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }

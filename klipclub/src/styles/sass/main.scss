@@ -1,8 +1,42 @@
+@use 'index';
+
 .main-container{
-    background-color: rgb(211, 211, 211);
-    border: 1px solid red;
-    width: 60%;
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
     display: flex;  
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filterOptions{
+    margin-top: 20px;
+    width: 52%; 
+    display: flex;
+    gap: 1em; 
+    
+    :first-child{
+        background-color: #474747;
+    }
+    
+    span{
+        padding: .5em 1em;
+        color: index.$font-main-color;
+        font-weight: bold;
+        font-family: index.$font-stack;
+        border-radius: 1em;
+    }   
+
+    span:hover{
+        background-color: index.$main-element-background-color-dark;
+    }
+}
+
+.post-container{
+    width: 100%;
+    height: auto;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
 }
     

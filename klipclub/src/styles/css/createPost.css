@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.createPost-container {
+  background-color: #2C2C2C;
+  padding: 1em;
+  border-radius: 1em;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: right;
+}
+.createPost-container .createPost-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.createPost-container .createPost-form .textPost-input {
+  resize: none;
+  font-size: 1em;
+  background-color: #444444;
+  border: none;
+  border-radius: 0.9em;
+  height: 70%;
+  width: 90%;
+  color: #E6E6E6;
+  padding: 1em;
+  font-family: "Roboto", sans-serif;
+}
+.createPost-container .createPost-form .textPost-input::placeholder {
+  margin: 0;
+}
+.createPost-container .createPost-form .formPost-options {
+  margin-top: 20px;
+}
+.createPost-container .createPost-form .formPost-options .submitButton {
+  width: fit-content;
+  border: none;
+  background-color: #1ED760;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 1.1em;
+  height: 40px;
+  width: 90px;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=createPost.css.map */

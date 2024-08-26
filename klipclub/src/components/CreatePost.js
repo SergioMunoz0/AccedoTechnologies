@@ -1,4 +1,7 @@
 import {useState} from 'react'
+import "../styles/css/index.css"
+import "../styles/css/createPost.css"
+
 
 export default function CreatePost(props){
 
@@ -38,12 +41,11 @@ export default function CreatePost(props){
         })
     }
     
-
-
     return(
         <div className="createPost-container">
-            <form onSubmit={handleSubmit}>
-                <input
+            <form className="createPost-form" onSubmit={handleSubmit}>
+                <textarea
+                    className="textPost-input"
                     onChange={handleForm}
                     type="text" 
                     id="post"
@@ -51,7 +53,9 @@ export default function CreatePost(props){
                     placeholder="what are you thinking?" 
                     value={formInfo.text}
                 />
-                <button type="submit">Submit</button>
+                <div className="formPost-options">
+                    <button className="submitButton" type="submit">Post</button>
+                </div>
             </form>
         </div>
     );
