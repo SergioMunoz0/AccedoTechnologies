@@ -37,4 +37,14 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 1080px) {
+  .main-container {
+    width: 100%;
+  }
+  .filterOptions {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

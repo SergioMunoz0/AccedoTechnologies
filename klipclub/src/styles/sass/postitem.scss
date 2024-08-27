@@ -127,3 +127,19 @@
         }
     }
 }
+
+@media (max-width: 1080px) {
+    .postItem-container{
+        width: 90%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .social-container{
+        gap: 0;
+
+        p{
+            display: none;
+        }
+    }
+  }
