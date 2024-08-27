@@ -34,7 +34,7 @@ export default function PostList(props){
     
 
     return(
-        <div className="postItem-container">
+        <div className={props.isFirst ? "postItem-container animationNewElement": "postItem-container"}>
 
             <div className="postItem-header">
 

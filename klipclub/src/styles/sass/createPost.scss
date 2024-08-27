@@ -16,6 +16,7 @@
         flex-direction: column;
         align-items: flex-end;
         height: 40px;
+        transition: height 0.2s ease;
         gap: 5px;
 
         .imagePost-container{
@@ -66,8 +67,25 @@
                 border-radius: 1.5em;
                 width: 170px;
                 display: flex;
-                
 
+                .arrowUp-icon{
+                    display: none;
+                    height: 16px;
+                    width: 15px;
+                    padding: 0;
+                    margin: 10px 20px 0 0;;
+                    filter: invert(70%);
+                }
+
+                .arrowDown-icon{
+                    display: inline-block;
+                    height: 16px;
+                    width: 15px;
+                    padding: 0;
+                    margin: 10px 20px 0 0;;
+                    filter: invert(70%);
+                }
+                
                 .checked-name{
                     height: 100%;
                     width: 100%;

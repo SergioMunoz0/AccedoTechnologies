@@ -12,12 +12,13 @@ export default function Main(){
         visibility: 'publico'
     }])
 
-    const postItems = dataPosts.map(post=>{
+    const postItems = dataPosts.map((post,index)=>{
         return <PostItem 
-                    text={post.text}
+                    key={index+1}
+                    isFirst={index===0 ? true : false}
+                    text={post.text} 
                     visibility={post.visibility}
-                />
-        })
+                />})
         
     return(
         <div className="main-container">

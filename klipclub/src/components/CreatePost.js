@@ -2,6 +2,8 @@ import {useState} from 'react'
 import "../styles/css/utils.css"
 import "../styles/css/createPost.css"
 import profilePicture from '../assets/images/profilePhoto.jpg'
+import arrowDown from '../assets/icons/arrowDown.png'
+import arrowUp from '../assets/icons/arrowUp.png'
 
 export default function CreatePost(props){
 
@@ -52,9 +54,15 @@ export default function CreatePost(props){
     function handleOptionList(){
         const list = document.querySelector(".visibility-list")
         list.style.display === "flex" ? list.style.display = "none" : list.style.display = "flex"
+
+        const arrowDown = document.querySelector(".arrowDown-icon")
+        const arrowUp = document.querySelector(".arrowUp-icon")
+
+        arrowDown.style.display === "inline-block" ? arrowDown.style.display = "none" : arrowDown.style.display = "inline-block"
+        arrowUp.style.display === "inline-block" ? arrowUp.style.display = "none" : arrowUp.style.display = "inline-block"
     }
 
-    function handlePostLyout(){
+    function handleCreatePostLyout(){
         setIsExtendentPost(true)
         document.querySelector(".createPost-form").style.height = "170px"
     }
@@ -67,7 +75,7 @@ export default function CreatePost(props){
                     <textarea
                         className="textPost-input"
                         onChange={handleForm}
-                        onClick={handlePostLyout}
+                        onClick={handleCreatePostLyout}
                         type="text" 
                         id="post"
                         name="text"
@@ -79,6 +87,8 @@ export default function CreatePost(props){
                 {isExtendentPost && <div className="formPost-options">
                     <div className="visibility-options" onClick={handleOptionList}>
                         <p className="checked-name">{checkItem}</p>
+                        <img className="arrowDown-icon" src={arrowDown} alt="arrowDown" />
+                        <img className="arrowUp-icon" src={arrowUp} alt="arrowUp" />
                         <div className='visibility-list'>
                             <input
                                 onChange={handleForm}
