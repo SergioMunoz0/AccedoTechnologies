@@ -2,40 +2,107 @@
 
 .createPost-container{
     background-color: utils.$main-element-background-color-dark;
+    font-family: utils.$font-stack;
     padding: 1em;
     border-radius: 1em;
     width: 50%;
     height: auto;
     display: flex;
     justify-content: right; 
-    
 
     .createPost-form{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        height: 170px;
+        height: 40px;
+        gap: 5px;
 
-        .textPost-input{
-            resize: none;
-            font-size: 1em;
-            background-color: #444444;
-            border: none;   
-            border-radius: .9em;
+        .imagePost-container{
+            width: 100%;
             height: 100%;
-            width: 90%;
-            color:utils.$font-main-color;
-            padding: 1em;
-            font-family: utils.$font-stack;
+            display: flex;
+            gap: 10px;  
+
+            .profilePicture{
+                border-radius: 2em;
+                height: 40px;
+                width: 40px;
+            }
+            
+            .textPost-input{
+                resize: none;
+                font-size: 1.1em;
+                background-color: #393936;
+                border: none;   
+                border-radius: .9em;    
+                width: 90%;
+                color:utils.$font-main-color;
+                padding: .5em;
+                font-family: utils.$font-stack;
+            }
+        }
+
+        .textPost-input:focus{
+            outline: none;
         }
 
         .textPost-input::placeholder{
             margin: 0;
+            color: #9c9c9c; 
         }
 
         .formPost-options{
             margin-top: 10px;
+            display: flex;
+            gap: 10px;
+
+            .visibility-options:hover{
+                background-color: utils.$main-element-background-color-light;
+            }
+
+            .visibility-options{
+                background-color: #393936;
+                border-radius: 1.5em;
+                width: 170px;
+                display: flex;
+                
+
+                .checked-name{
+                    height: 100%;
+                    width: 100%;
+                    margin-top: 10px;
+                    margin-left: 20px;
+                    text-align: left;
+                    color: utils.$font-main-color;
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }   
+
+                label{
+                    height: 8px;
+                    padding: 1em;
+                    border-radius: 1.5em;
+                    user-select: none;
+                }
+
+                label:hover{
+                    background-color: #474747;
+                }
+
+                .visibility-list{
+                    top: 215px;
+                    display: none;
+                    background-color: #393936;
+                    border-radius: 1.1em;
+                    flex-direction: column;
+                    position: absolute;
+                    padding: .5em;
+                    color: utils.$font-main-color;
+                }
+            }
 
             .submitButton{
                 width: fit-content;

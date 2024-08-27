@@ -4,12 +4,18 @@ import {useState} from 'react'
 import '../styles/css/main.css'
 
 export default function Main(){
-    //Variable que guarda los post localmente
-    const [dataPosts,setDataPosts] = useState([])
+    //Variable que guarda los post localmente (tiene un post por defecto para mejor visualizacion)
+    const [dataPosts,setDataPosts] = useState([{
+        text:`El gato negro observaba atento desde el tejado. Sus ojos brillaban en la oscuridad,
+        como si guardaran secretos milenarios. Un suave maullido rompió el silencio de la noche, y la luna, 
+        curiosa, asomó entre las nubes para ver al misterioso felino, que parecía ser el guardián de la noche.`,
+        visibility: 'publico'
+    }])
 
     const postItems = dataPosts.map(post=>{
         return <PostItem 
                     text={post.text}
+                    visibility={post.visibility}
                 />
         })
         

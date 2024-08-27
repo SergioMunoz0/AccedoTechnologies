@@ -31,7 +31,7 @@ export default function PostList(props){
             })
         }
     }
-
+    
 
     return(
         <div className="postItem-container">
@@ -56,8 +56,7 @@ export default function PostList(props){
 
             <span className="divisorLine"></span>
 
-            <div className="postItem-socialOptions">
-                {handleSocialNumber()}  
+            <div className="postItem-socialOptions" onLoad={handleSocialNumber()}>
                 <span>
                     <div className="social-container">
                         <img className="social-icon hornsSing-icon" src={hornsIcon} alt="hornsIcon" />

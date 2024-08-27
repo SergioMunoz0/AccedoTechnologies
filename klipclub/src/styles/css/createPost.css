@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap");
 .createPost-container {
   background-color: #292927;
+  font-family: "Helvetica", sans-serif;
   padding: 1em;
   border-radius: 1em;
   width: 50%;
@@ -13,25 +14,81 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: 170px;
+  height: 40px;
+  gap: 5px;
 }
-.createPost-container .createPost-form .textPost-input {
+.createPost-container .createPost-form .imagePost-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+}
+.createPost-container .createPost-form .imagePost-container .profilePicture {
+  border-radius: 2em;
+  height: 40px;
+  width: 40px;
+}
+.createPost-container .createPost-form .imagePost-container .textPost-input {
   resize: none;
-  font-size: 1em;
-  background-color: #444444;
+  font-size: 1.1em;
+  background-color: #393936;
   border: none;
   border-radius: 0.9em;
-  height: 100%;
   width: 90%;
   color: rgba(228, 228, 227, 0.9725490196);
-  padding: 1em;
+  padding: 0.5em;
   font-family: "Helvetica", sans-serif;
+}
+.createPost-container .createPost-form .textPost-input:focus {
+  outline: none;
 }
 .createPost-container .createPost-form .textPost-input::placeholder {
   margin: 0;
+  color: #9c9c9c;
 }
 .createPost-container .createPost-form .formPost-options {
   margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.createPost-container .createPost-form .formPost-options .visibility-options:hover {
+  background-color: #474747;
+}
+.createPost-container .createPost-form .formPost-options .visibility-options {
+  background-color: #393936;
+  border-radius: 1.5em;
+  width: 170px;
+  display: flex;
+}
+.createPost-container .createPost-form .formPost-options .visibility-options .checked-name {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: left;
+  color: rgba(228, 228, 227, 0.9725490196);
+}
+.createPost-container .createPost-form .formPost-options .visibility-options input[type=radio] {
+  display: none;
+}
+.createPost-container .createPost-form .formPost-options .visibility-options label {
+  height: 8px;
+  padding: 1em;
+  border-radius: 1.5em;
+  user-select: none;
+}
+.createPost-container .createPost-form .formPost-options .visibility-options label:hover {
+  background-color: #474747;
+}
+.createPost-container .createPost-form .formPost-options .visibility-options .visibility-list {
+  top: 215px;
+  display: none;
+  background-color: #393936;
+  border-radius: 1.1em;
+  flex-direction: column;
+  position: absolute;
+  padding: 0.5em;
+  color: rgba(228, 228, 227, 0.9725490196);
 }
 .createPost-container .createPost-form .formPost-options .submitButton {
   width: fit-content;
