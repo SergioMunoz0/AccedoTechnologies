@@ -13,18 +13,53 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.postItem-container .postItem-userInfo {
+.postItem-container .postItem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.postItem-container .postItem-header .postItem-userInfo {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
-.postItem-container .postItem-userInfo p {
+.postItem-container .postItem-header .postItem-userInfo .point {
+  margin-bottom: 6px;
+}
+.postItem-container .postItem-header .postItem-userInfo p {
   font-weight: bolder;
 }
-.postItem-container .postItem-userInfo .profilePicture {
+.postItem-container .postItem-header .postItem-userInfo .profilePicture {
   border-radius: 2em;
   height: 40px;
   width: 40px;
+}
+.postItem-container .postItem-header .postItem-userInfo .visibility-icon {
+  height: 18px;
+  width: 18px;
+  padding: 0;
+  margin: 0;
+  filter: invert(70%);
+}
+.postItem-container .postItem-header .postItem-userInfo .verifiedUser {
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  margin: 0;
+  filter: invert(100%);
+}
+.postItem-container .postItem-header .postItem-userInfo .postTime {
+  color: rgba(148, 148, 148, 0.9803921569);
+  font-weight: 700;
+  font-size: 0.8em;
+}
+.postItem-container .postItem-header .threePoint-icon {
+  height: 15px;
+  width: 15px;
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  filter: invert(100%);
 }
 .postItem-container .postItem-main {
   text-align: justify;
@@ -45,9 +80,32 @@
   font-weight: bold;
   font-family: "Helvetica", sans-serif;
   border-radius: 1em;
+  width: 30%;
+  height: 20px;
 }
 .postItem-container .postItem-socialOptions span:hover {
   background-color: #474747;
+}
+.postItem-container .postItem-socialOptions .social-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.postItem-container .postItem-socialOptions .social-container .social-icon {
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  filter: invert(100%);
+}
+.postItem-container .postItem-socialOptions .social-container .hornsSing-icon {
+  height: 35px;
+  width: 35px;
+}
+.postItem-container .postItem-socialOptions .social-container .comments-icon {
+  width: 25px;
 }
 
 /*# sourceMappingURL=postitem.css.map */

@@ -6,11 +6,7 @@ import "../styles/css/createPost.css"
 export default function CreatePost(props){
 
     //Informacion de los posts por ahora solo se tomara el mensaje, pero se puede agrega mas
-    const [formInfo,setFormInfo] = useState(
-        {
-            text: ""
-        }
-    )
+    const [formInfo,setFormInfo] = useState({text: ""})
 
     function handleForm(event){
         const {name, value} = event.target

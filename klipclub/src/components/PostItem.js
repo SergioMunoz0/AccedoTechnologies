@@ -1,5 +1,13 @@
 import {useState} from 'react'
-import profilePicture from '../assets/profilePhoto.jpg'
+
+import profilePicture from '../assets/images/profilePhoto.jpg'
+import shareIcon from '../assets/icons/share-icon.png'
+import commentIcon from '../assets/icons/commentIcon.png'
+import hornsIcon from '../assets/icons/horns-sing.png'
+import earth from '../assets/icons/earth.png'
+import threePoint from '../assets/icons/threePoint.png'
+import verifiedUser from '../assets/icons/verified-user.png'
+
 import "../styles/css/postitem.css"
 import "../styles/css/main.css"
 
@@ -12,7 +20,7 @@ export default function PostList(props){
             shares: 0,
             isSet: false
         })
-    
+
     function handleSocialNumber(){
         if(!socialNumbers.isSet){
             setSocialNumbers({
@@ -27,11 +35,21 @@ export default function PostList(props){
 
     return(
         <div className="postItem-container">
-            <div className="postItem-userInfo">
-                <img className="profilePicture" src={profilePicture} alt="ProfilePicture" />
-                <p> Sergio Carrillo</p>
-            </div>
 
+            <div className="postItem-header">
+
+                <div className="postItem-userInfo">
+                    <img className="profilePicture" src={profilePicture} alt="ProfilePicture" />
+                    <p> Sergio Carrillo</p>
+                    <img className="verifiedUser" src={verifiedUser} alt="verifiedUser" />
+                    <span className="point"> . </span>
+                    <p className="postTime"> 5 min</p>
+                    <img className="visibility-icon" src={earth} alt="visibility" />
+                </div>
+
+                <img className="threePoint-icon" src={threePoint} alt="threePoint" />
+            </div>  
+            
             <div className="postItem-main">
                 <p>{props.text}</p>
             </div>
@@ -39,10 +57,27 @@ export default function PostList(props){
             <span className="divisorLine"></span>
 
             <div className="postItem-socialOptions">
-                {handleSocialNumber()}
-                <span>{socialNumbers.Likes} Likes</span>
-                <span>{socialNumbers.comments} comments</span>
-                <span>{socialNumbers.shares} shares</span>   
+                {handleSocialNumber()}  
+                <span>
+                    <div className="social-container">
+                        <img className="social-icon hornsSing-icon" src={hornsIcon} alt="hornsIcon" />
+                         <p>{socialNumbers.Likes} Likes</p> 
+                        </div>
+                </span>
+                
+                <span>
+                    <div className="social-container">
+                        <img className="social-icon comments-icon" src={commentIcon} alt="commentIcon" />
+                        <p>{socialNumbers.comments} comments</p>
+                    </div>
+                </span>
+
+                <span>
+                    <div className="social-container">
+                        <img className="social-icon" src={shareIcon} alt="shareIcon" />
+                        <p>{socialNumbers.shares} shares</p> 
+                    </div>
+                </span>
             </div>
             
         </div>

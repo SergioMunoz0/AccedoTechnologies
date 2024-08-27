@@ -14,22 +14,64 @@
     flex-direction: column;
     justify-content: space-between;
 
-    .postItem-userInfo{
+    .postItem-header{
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 5px;
 
-        p{
-            font-weight: bolder;
+        .postItem-userInfo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .point{
+                margin-bottom: 6px;
+            }
+    
+            p{
+                font-weight: bolder;
+            }
+    
+            .profilePicture{
+                border-radius: 2em;
+                height: 40px;
+                width: 40px;
+            }
+    
+            .visibility-icon{
+                height: 18px;
+                width: 18px;
+                padding: 0;
+                margin: 0;
+                filter: invert(70%);
+            }
+
+            .verifiedUser{
+                height: 16px;
+                width: 16px;
+                padding: 0;
+                margin: 0;
+                filter: invert(100%);
+            }
+
+            .postTime{  
+                color: #949494fa;
+                font-weight: 700;
+                font-size: .8em;
+            }
         }
 
-        .profilePicture{
-            border-radius: 2em;
-            height: 40px;
-            width: 40px;
+        .threePoint-icon{
+            height: 15px;
+            width: 15px;
+            padding: 0;
+            margin: 0;
+            margin-right: 10px;
+            filter: invert(100%);
         }
     }
 
+    
     .postItem-main{
         text-align: justify;
         line-height: 1.5;
@@ -51,10 +93,37 @@
             font-weight: bold;
             font-family: utils.$font-stack;
             border-radius: 1em;
+            width: 30%;
+            height: 20px;
         }   
     
         span:hover{
             background-color: utils.$main-element-background-color-light;
+        }
+
+        .social-container{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .social-icon{
+                height: 20px;
+                width: 20px;
+                padding: 0;
+                margin: 0;
+                filter: invert(100%);
+            }
+
+            .hornsSing-icon{
+                height: 35px;
+                width: 35px;
+            }
+
+            .comments-icon{
+                width: 25px;
+            }
         }
     }
 }
