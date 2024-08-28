@@ -1,4 +1,4 @@
-@use 'utils';
+@import url('./utils.css');
 
 @keyframes swift_slide {
     from {
@@ -20,9 +20,9 @@
     width: 50%;
     padding: 1em;
     border-radius: 1em;
-    background-color: utils.$main-element-background-color-dark;
-    color:utils.$font-main-color;
-    font-family: utils.$font-stack;
+    background-color: var(--main-element-background-color-dark);
+    color:var(--font-main-color);
+    font-family: var(--font-stack);
     min-height: 100px;
     display: flex;  
     gap: 1em;
@@ -94,7 +94,7 @@
 
     .divisorLine{
         width: 100%;
-        border: solid 1px utils.$main-element-background-color-light;
+        border: solid 1px var(--main-element-background-color-light);
     }
 
     .postItem-socialOptions{
@@ -104,16 +104,16 @@
 
         span{
             padding: .5em 1em;
-            color: utils.$font-main-color;
+            color: var(--font-main-color);
             font-weight: bold;
-            font-family: utils.$font-stack;
+            font-family: var(--font-stack);
             border-radius: 1em;
             width: 30%;
             height: 20px;
         }   
     
         span:hover{
-            background-color: utils.$main-element-background-color-light;
+            background-color: var(--main-element-background-color-light);
         }
 
         .social-container{

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
 
-$font-stack: 'Helvetica', sans-serif;
-$font-main-color: #e4e4e3f8;
-$buttons-color: #1ED760;
-$main-element-background-color-dark: #292927;
-$main-element-background-color-light: #474747;
+:root{
+    --font-stack: 'Helvetica', sans-serif;
+    --font-main-color: #e4e4e3f8;
+    --buttons-color: #1ED760;
+    --main-element-background-color-dark: #292927;
+    --main-element-background-color-light: #474747;
+}
