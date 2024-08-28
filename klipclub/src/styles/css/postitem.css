@@ -26,6 +26,7 @@
   gap: 1em;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
 }
 .postItem-container .postItem-header {
   display: flex;
@@ -48,12 +49,19 @@
   height: 40px;
   width: 40px;
 }
-.postItem-container .postItem-header .postItem-userInfo .visibility-icon {
+.postItem-container .postItem-header .postItem-userInfo .icon-container {
+  padding: 0.4em 0.5em 0.2em 0.5em;
+  border-radius: 2em;
+}
+.postItem-container .postItem-header .postItem-userInfo .icon-container .visibility-icon {
   height: 18px;
   width: 18px;
   padding: 0;
   margin: 0;
   filter: invert(70%);
+}
+.postItem-container .postItem-header .postItem-userInfo .icon-container:hover {
+  background-color: var(--main-element-background-color-light);
 }
 .postItem-container .postItem-header .postItem-userInfo .verifiedUser {
   height: 16px;
@@ -67,13 +75,23 @@
   font-weight: 700;
   font-size: 0.8em;
 }
-.postItem-container .postItem-header .threePoint-icon {
+.postItem-container .postItem-header .threePoint-container {
+  padding: 0.7em;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.postItem-container .postItem-header .threePoint-container .threePoint-icon {
   height: 15px;
   width: 15px;
   padding: 0;
   margin: 0;
-  margin-right: 10px;
   filter: invert(100%);
+}
+.postItem-container .postItem-header .threePoint-container:hover {
+  background-color: var(--main-element-background-color-light);
 }
 .postItem-container .postItem-main {
   text-align: justify;
@@ -122,9 +140,9 @@
   width: 25px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1650px) {
   .postItem-container {
-    width: 90%;
+    width: 80%;
   }
 }
 @media (max-width: 500px) {

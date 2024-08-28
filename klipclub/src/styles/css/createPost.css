@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./utils.css");
 .createPost-container {
   background-color: var(--main-element-background-color-dark);
@@ -8,6 +9,7 @@
   height: auto;
   display: flex;
   justify-content: right;
+  box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
 }
 .createPost-container .createPost-form {
   width: 100%;
@@ -24,6 +26,13 @@
   display: flex;
   gap: 15px;
 }
+.createPost-container .createPost-form .imagePost-container .emoji-icon {
+  position: relative;
+  top: 0;
+  height: 22px;
+  width: 22px;
+  filter: invert(100%);
+}
 .createPost-container .createPost-form .imagePost-container .profilePicture {
   border-radius: 2em;
   height: 40px;
@@ -39,6 +48,7 @@
   color: var(--font-main-color);
   padding: 0.5em;
   font-family: var(--font-stack);
+  text-align: justify;
 }
 .createPost-container .createPost-form .textPost-input:focus {
   outline: none;
@@ -171,6 +181,7 @@
   flex-direction: column;
   position: absolute;
   padding: 0.5em;
+  box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
   color: var(--font-main-color);
 }
 .createPost-container .createPost-form .formPost-options .submit-options .submitButton {
@@ -185,13 +196,33 @@
   margin: 0;
   font-family: var(--font-main-color);
 }
+.createPost-container .createPost-form .formPost-options .submit-options .submitButton:hover {
+  opacity: 0.5;
+}
 .createPost-container .createPost-form .formPost-options .visibility-options:hover {
   background-color: var(--main-element-background-color-light);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1650px) {
   .createPost-container {
-    width: 90%;
+    width: 80%;
+  }
+}
+@media (max-width: 750px) {
+  .createPost-form {
+    height: 180px;
+  }
+  .createPost-form .formPost-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .createPost-form .formPost-options .postAdd-optionsñ {
+    width: fit-content;
+  }
+  .createPost-form .formPost-options .checked-name {
+    margin-bottom: 10px;
   }
 }
 

@@ -9,6 +9,7 @@
     height: auto;
     display: flex;
     justify-content: right; 
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
 
     .createPost-form{
         width: 100%;
@@ -25,12 +26,20 @@
             display: flex;
             gap: 15px;  
 
+            .emoji-icon{
+                position: relative;
+                top: 0;
+                height: 22px;
+                width: 22px;    
+                filter: invert(100%);
+            }
+
             .profilePicture{
                 border-radius: 2em;
                 height: 40px;
                 width: 40px;
             }
-            
+
             .textPost-input{
                 resize: none;
                 font-size: 1.1em;
@@ -41,6 +50,7 @@
                 color: var(--font-main-color);
                 padding: .5em;
                 font-family: var(--font-stack);
+                text-align: justify;    
             }
         }
 
@@ -197,6 +207,7 @@
                         flex-direction: column;
                         position: absolute;
                         padding: .5em;
+                        box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
                         color: var(--font-main-color);
                     }
                 }
@@ -213,6 +224,10 @@
                     margin: 0;
                     font-family: var(--font-main-color);
                 }
+
+                .submitButton:hover{
+                    opacity: .5;
+                }
             }
 
             .visibility-options:hover{
@@ -222,8 +237,31 @@
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1650px) {
     .createPost-container{
-        width: 90%;
+        width: 80%;
     }
   }
+
+@media (max-width: 750px) {
+  
+  .createPost-form{
+    height: 180px;
+
+    .formPost-options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+        gap: 1em;
+    
+        .postAdd-optionsñ{
+            width: fit-content;
+        }
+    
+        .checked-name{
+            margin-bottom:10px;
+        }
+    
+      }
+  }
+}

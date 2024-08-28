@@ -13,7 +13,7 @@ import label from '../assets/icons/label.png'
 
 export default function CreatePost(props){
 
-    //Informacion de los posts por ahora solo se tomara el mensaje, pero se puede agrega mas
+    //Informacion formulario post
     const [formInfo,setFormInfo] = useState(
         {
             text: "",
@@ -21,10 +21,9 @@ export default function CreatePost(props){
         }
     )
 
-    //visibilidad del post (boton)
     const [checkItem, setCheckItem] = useState("Publico")
 
-    //para saber que tanto del create post mostrar (falso por defecto)
+    //Determina el layout de createPost
     const [isExtendentPost, setIsExtendentPost] = useState(false)
 
     function handleForm(event){
@@ -37,7 +36,6 @@ export default function CreatePost(props){
         })
     }
 
-    //Se almacena localmente cada post en la variable "dataPost"
     function handleSubmit(event){
         event.preventDefault()
 
@@ -55,31 +53,36 @@ export default function CreatePost(props){
         props.setDataPosts(prevData =>{
             return [newPost, ...prevData]
         })
+
+        //Se llama a la funcion que controla el layout para despues de un submit
+        handleCreatePostLyout("submitted")
     }
 
     function handleOptionList(){
         const list = document.querySelector(".visibility-list")
         list.style.display === "flex" ? list.style.display = "none" : list.style.display = "flex"
-
-        /*const arrowDown = document.querySelector(".arrowDown-icon")
-        const arrowUp = document.querySelector(".arrowUp-icon")
-
-        
-        console.log(arrowDown.style.display.length === 0)
-        if(arrowDown.style.display.lenght === 0) arrowDown.style.display = "inline-block" 
-
-        console.log(arrowDown.style.display)
-        arrowDown.style.display === "inline-block" ? arrowDown.style.display = "none" : arrowDown.style.display = "inline-block"
-        arrowUp.style.display === "inline-block" ? arrowUp.style.display = "none" : arrowUp.style.display = "inline-block"*/
     }
 
-    function handleCreatePostLyout(){
-        setIsExtendentPost(true)
-        document.querySelector(".createPost-form").style.height = "170px"
-        document.querySelector(".textPost-input").classList.remove("textPost-hoverEffect");
+    function handleCreatePostLyout(state){
+        const postForm = document.querySelector(".createPost-form")
+        const postInput = document.querySelector(".textPost-input")
+
+        if(state==="submitted"){
+            setIsExtendentPost(false)
+            postForm.style.transition = "none"
+            postForm.style.height = "40px"
+            postInput.classList.add("textPost-hoverEffect");
+            setFormInfo({text:""}) 
+            
+        }else{
+            setIsExtendentPost(true)
+            postForm.style.transition = "height 0.2s ease"
+            postForm.style.height = "170px"
+            postInput.classList.remove("textPost-hoverEffect");
+        }
     }
 
-    //Controla el label de los iconos de "Agrega"
+    //Controla el label de los iconos
     function handleIconLabel(event, element){
         const label = document.querySelector(`#${element}`)
         event === "onMouseOver" ? label.style.display = "block" : label.style.display = "none"
@@ -99,7 +102,7 @@ export default function CreatePost(props){
                         name="text"
                         placeholder="what are you thinking?" 
                         value={formInfo.text}
-                    />
+                    /> 
                 </div>
                 
                 {isExtendentPost && <div className="formPost-options">
@@ -130,7 +133,7 @@ export default function CreatePost(props){
                     <div className="submit-options">
                         <div className="visibility-options" onClick={handleOptionList}>
                             <p className="checked-name">{checkItem}</p>
-                            <img className="arrowDown-icon" src={arrowDown} alt="arrowDown" />
+                            <img className="arrowDown-icon" src={arrowDown} alt="arrowDown" />  
                             <img className="arrowUp-icon" src={arrowUp} alt="arrowUp" />
                             <div className='visibility-list'>
                                 <input
@@ -167,7 +170,6 @@ export default function CreatePost(props){
                         <button className="submitButton" type="submit">Post</button>
                     </div>
                 </div>}
-
             </form>
         </div>
     );

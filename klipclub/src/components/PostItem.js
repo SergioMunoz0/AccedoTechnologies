@@ -13,14 +13,14 @@ import "../styles/css/main.css"
 
 export default function PostList(props){
 
-    //datos simulados para los likes, comments y shares
     const [socialNumbers,setSocialNumbers] = useState({
             Likes: 0,
             comments: 0,
             shares: 0,
             isSet: false
         })
-
+    
+    //datos simulados para los likes, comments y shares
     function handleSocialNumber(){
         if(!socialNumbers.isSet){
             setSocialNumbers({
@@ -32,22 +32,23 @@ export default function PostList(props){
         }
     }
     
-
     return(
         <div className={props.isFirst ? "postItem-container animationNewElement": "postItem-container"}>
-
             <div className="postItem-header">
-
                 <div className="postItem-userInfo">
                     <img className="profilePicture" src={profilePicture} alt="ProfilePicture" />
                     <p> Sergio Carrillo</p>
                     <img className="verifiedUser" src={verifiedUser} alt="verifiedUser" />
                     <span className="point"> . </span>
-                    <p className="postTime"> 5 min</p>
-                    <img className="visibility-icon" src={earth} alt="visibility" />
+                    <p className="postTime"> 1 min</p>
+                    <div className="icon-container">
+                        <img className="visibility-icon" src={earth} alt="visibility" />
+                    </div>  
                 </div>
-
-                <img className="threePoint-icon" src={threePoint} alt="threePoint" />
+                
+                <div className="threePoint-container">
+                    <img className="threePoint-icon" src={threePoint} alt="threePoint" />
+                </div>
             </div>  
             
             <div className="postItem-main">

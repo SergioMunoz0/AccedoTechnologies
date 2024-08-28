@@ -14,7 +14,7 @@ export default function Main(){
 
     const postItems = dataPosts.map((post,index)=>{
         return <PostItem 
-                    key={index+1}
+                    key={index === 0 ? `first-${Date.now()}` : index + 1}  //solucion rapida para generar una animacion al primer elemento
                     isFirst={index===0 ? true : false}
                     text={post.text} 
                     visibility={post.visibility}
@@ -35,7 +35,7 @@ export default function Main(){
 
             {dataPosts.length > 0 && (
                 <div className="post-container">
-                    {postItems}
+                        {postItems}
                 </div>
             )}
         </div>
