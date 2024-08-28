@@ -55,11 +55,16 @@ export default function CreatePost(props){
         const list = document.querySelector(".visibility-list")
         list.style.display === "flex" ? list.style.display = "none" : list.style.display = "flex"
 
-        const arrowDown = document.querySelector(".arrowDown-icon")
+        /*const arrowDown = document.querySelector(".arrowDown-icon")
         const arrowUp = document.querySelector(".arrowUp-icon")
 
+        
+        console.log(arrowDown.style.display.length === 0)
+        if(arrowDown.style.display.lenght === 0) arrowDown.style.display = "inline-block" 
+
+        console.log(arrowDown.style.display)
         arrowDown.style.display === "inline-block" ? arrowDown.style.display = "none" : arrowDown.style.display = "inline-block"
-        arrowUp.style.display === "inline-block" ? arrowUp.style.display = "none" : arrowUp.style.display = "inline-block"
+        arrowUp.style.display === "inline-block" ? arrowUp.style.display = "none" : arrowUp.style.display = "inline-block"*/
     }
 
     function handleCreatePostLyout(){

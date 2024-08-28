@@ -50,6 +50,7 @@
 
         .textPost-input::placeholder{
             margin: 0;
+            padding-top: 2px;
             color: #9c9c9c; 
         }
 
@@ -70,15 +71,18 @@
 
                 .arrowUp-icon{
                     display: none;
+                    user-select: none;
                     height: 16px;
                     width: 15px;
                     padding: 0;
                     margin: 10px 20px 0 0;;
                     filter: invert(70%);
+
                 }
 
                 .arrowDown-icon{
                     display: inline-block;
+                    user-select: none;
                     height: 16px;
                     width: 15px;
                     padding: 0;

@@ -45,6 +45,7 @@
 }
 .createPost-container .createPost-form .textPost-input::placeholder {
   margin: 0;
+  padding-top: 2px;
   color: #9c9c9c;
 }
 .createPost-container .createPost-form .formPost-options {
@@ -63,6 +64,7 @@
 }
 .createPost-container .createPost-form .formPost-options .visibility-options .arrowUp-icon {
   display: none;
+  user-select: none;
   height: 16px;
   width: 15px;
   padding: 0;
@@ -71,6 +73,7 @@
 }
 .createPost-container .createPost-form .formPost-options .visibility-options .arrowDown-icon {
   display: inline-block;
+  user-select: none;
   height: 16px;
   width: 15px;
   padding: 0;
